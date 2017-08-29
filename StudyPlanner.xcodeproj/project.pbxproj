@@ -14,6 +14,7 @@
 		4972F6B11F4FB4980082F413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4972F6AF1F4FB4980082F413 /* LaunchScreen.storyboard */; };
 		4972F6B91F4FB5770082F413 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972F6B81F4FB5760082F413 /* CalendarViewController.swift */; };
 		4972F6BB1F4FBFC50082F413 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972F6BA1F4FBFC50082F413 /* CustomCell.swift */; };
+		49BF532F1F560F750065E72E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF532E1F560F750065E72E /* TimerViewController.swift */; };
 		E7A68792CD9763FFCA101DC6 /* Pods_StudyPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF7BD2E77175180462E2766 /* Pods_StudyPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		4972F6B21F4FB4980082F413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4972F6B81F4FB5760082F413 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4972F6BA1F4FBFC50082F413 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		49BF532E1F560F750065E72E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		4BF7BD2E77175180462E2766 /* Pods_StudyPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D476A2899B1CB3B85E9D5623 /* Pods-StudyPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPlanner/Pods-StudyPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				4972F6A61F4FB4980082F413 /* AppDelegate.swift */,
 				4972F6A81F4FB4980082F413 /* ViewController.swift */,
 				4972F6AA1F4FB4980082F413 /* Main.storyboard */,
+				49BF532E1F560F750065E72E /* TimerViewController.swift */,
 				4972F6BA1F4FBFC50082F413 /* CustomCell.swift */,
 				4972F6B81F4FB5760082F413 /* CalendarViewController.swift */,
 				4972F6AD1F4FB4980082F413 /* Assets.xcassets */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BF532F1F560F750065E72E /* TimerViewController.swift in Sources */,
 				4972F6B91F4FB5770082F413 /* CalendarViewController.swift in Sources */,
 				4972F6A91F4FB4980082F413 /* ViewController.swift in Sources */,
 				4972F6BB1F4FBFC50082F413 /* CustomCell.swift in Sources */,

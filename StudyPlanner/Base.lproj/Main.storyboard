@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="cLP-fC-c3v" kind="show" id="91r-SL-eRJ"/>
+                                    <segue destination="3gC-Bo-GJ0" kind="show" id="FWS-gh-KNb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,72 +37,69 @@
             </objects>
             <point key="canvasLocation" x="-585" y="64"/>
         </scene>
-        <!--Ib Calendar Data Source-->
-        <scene sceneID="VMc-zx-Z35">
+        <!--Timer View Controller-->
+        <scene sceneID="x5A-gc-b2j">
             <objects>
-                <viewController id="cLP-fC-c3v" sceneMemberID="viewController">
+                <viewController id="3gC-Bo-GJ0" customClass="TimerViewController" customModule="StudyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5ql-hb-1AX"/>
-                        <viewControllerLayoutGuide type="bottom" id="dgc-Y2-bqS"/>
+                        <viewControllerLayoutGuide type="top" id="Zhe-Yl-1dl"/>
+                        <viewControllerLayoutGuide type="bottom" id="VDG-kX-76j"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vdb-XR-dJD">
+                    <view key="view" contentMode="scaleToFill" id="nv6-cP-QLt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0d6-YV-vnO" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="241" id="lue-2j-tvl"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KWv-9R-r0T">
-                                    <size key="itemSize" width="94" height="91"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="Xpb-KE-hB5" customClass="CustomCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="91"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="94" height="91"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es1-Cg-te1">
-                                                    <rect key="frame" x="26" y="35" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="es1-Cg-te1" firstAttribute="centerY" secondItem="Xpb-KE-hB5" secondAttribute="centerY" id="uV1-hx-UOs"/>
-                                            <constraint firstItem="es1-Cg-te1" firstAttribute="centerX" secondItem="Xpb-KE-hB5" secondAttribute="centerX" id="xuz-zh-7Ii"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dateLabel" destination="es1-Cg-te1" id="Wyp-wq-cyC"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="ibCalendarDataSource" destination="cLP-fC-c3v" id="CAA-TL-LhK"/>
-                                    <outlet property="ibCalendarDelegate" destination="cLP-fC-c3v" id="fbT-lD-j8B"/>
-                                </connections>
-                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sn-ce-TdO">
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-6n-NVC">
+                                <rect key="frame" x="166" y="100" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNQ-PK-ORk">
+                                <rect key="frame" x="61" y="575" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-u8-e8h">
+                                <rect key="frame" x="266" y="575" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KVD-e8-LTk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="525734422.17247701">
+                                    <!--2017-08-29 21:20:22 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0d6-YV-vnO" secondAttribute="trailing" id="Pgz-de-t7G"/>
-                            <constraint firstItem="0d6-YV-vnO" firstAttribute="leading" secondItem="Vdb-XR-dJD" secondAttribute="leading" id="hfd-HU-8tz"/>
-                            <constraint firstItem="0d6-YV-vnO" firstAttribute="top" secondItem="Vdb-XR-dJD" secondAttribute="top" id="l3A-lN-ehb"/>
+                            <constraint firstItem="KVD-e8-LTk" firstAttribute="leading" secondItem="nv6-cP-QLt" secondAttribute="leading" id="BTl-ZV-Puz"/>
+                            <constraint firstItem="1sn-ce-TdO" firstAttribute="centerY" secondItem="nv6-cP-QLt" secondAttribute="centerY" id="WTe-qd-y2b"/>
+                            <constraint firstItem="KVD-e8-LTk" firstAttribute="top" secondItem="Zhe-Yl-1dl" secondAttribute="bottom" id="eLu-Oa-eZJ"/>
+                            <constraint firstItem="ZOb-6n-NVC" firstAttribute="top" secondItem="Zhe-Yl-1dl" secondAttribute="bottom" constant="80" id="gKz-i3-AYZ"/>
+                            <constraint firstAttribute="trailing" secondItem="KVD-e8-LTk" secondAttribute="trailing" id="lEo-hp-oTA"/>
+                            <constraint firstItem="1sn-ce-TdO" firstAttribute="centerX" secondItem="nv6-cP-QLt" secondAttribute="centerX" id="qFv-9e-O6n"/>
+                            <constraint firstItem="ZOb-6n-NVC" firstAttribute="centerX" secondItem="nv6-cP-QLt" secondAttribute="centerX" id="wiQ-46-Jq8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerLabel" destination="ZOb-6n-NVC" id="VI6-Nx-cPZ"/>
+                        <outlet property="pauseButton" destination="UNQ-PK-ORk" id="If9-qm-Q5J"/>
+                        <outlet property="startButton" destination="TX7-u8-e8h" id="9r3-BP-y1P"/>
+                        <outlet property="timePicker" destination="KVD-e8-LTk" id="d3j-Xk-HNj"/>
+                        <outlet property="timerLabel" destination="1sn-ce-TdO" id="IAi-m1-8fT"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmj-Sb-6qN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBG-I3-Ier" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="63"/>
+            <point key="canvasLocation" x="416.80000000000001" y="60.719640179910051"/>
         </scene>
     </scenes>
 </document>
