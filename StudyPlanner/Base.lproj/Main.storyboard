@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,52 +50,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sn-ce-TdO">
-                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-6n-NVC">
-                                <rect key="frame" x="166" y="100" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-u8-e8h">
+                                <rect key="frame" x="266" y="575" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="3gC-Bo-GJ0" eventType="touchUpInside" id="PH2-DD-0rb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaV-Pl-XTb">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNQ-PK-ORk">
-                                <rect key="frame" x="61" y="575" width="46" height="30"/>
+                                <rect key="frame" x="57" y="575" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="3gC-Bo-GJ0" eventType="touchUpInside" id="tY3-cp-Jfd"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-u8-e8h">
-                                <rect key="frame" x="266" y="575" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KVD-e8-LTk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="525734422.17247701">
-                                    <!--2017-08-29 21:20:22 +0000-->
-                                </date>
-                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zs-6D-suy">
+                                <rect key="frame" x="16" y="121" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KVD-e8-LTk" firstAttribute="leading" secondItem="nv6-cP-QLt" secondAttribute="leading" id="BTl-ZV-Puz"/>
-                            <constraint firstItem="1sn-ce-TdO" firstAttribute="centerY" secondItem="nv6-cP-QLt" secondAttribute="centerY" id="WTe-qd-y2b"/>
-                            <constraint firstItem="KVD-e8-LTk" firstAttribute="top" secondItem="Zhe-Yl-1dl" secondAttribute="bottom" id="eLu-Oa-eZJ"/>
-                            <constraint firstItem="ZOb-6n-NVC" firstAttribute="top" secondItem="Zhe-Yl-1dl" secondAttribute="bottom" constant="80" id="gKz-i3-AYZ"/>
-                            <constraint firstAttribute="trailing" secondItem="KVD-e8-LTk" secondAttribute="trailing" id="lEo-hp-oTA"/>
-                            <constraint firstItem="1sn-ce-TdO" firstAttribute="centerX" secondItem="nv6-cP-QLt" secondAttribute="centerX" id="qFv-9e-O6n"/>
-                            <constraint firstItem="ZOb-6n-NVC" firstAttribute="centerX" secondItem="nv6-cP-QLt" secondAttribute="centerX" id="wiQ-46-Jq8"/>
+                            <constraint firstItem="6zs-6D-suy" firstAttribute="leading" secondItem="nv6-cP-QLt" secondAttribute="leadingMargin" id="G5o-cV-njh"/>
+                            <constraint firstItem="NaV-Pl-XTb" firstAttribute="centerX" secondItem="nv6-cP-QLt" secondAttribute="centerX" id="SKH-3x-daG"/>
+                            <constraint firstItem="6zs-6D-suy" firstAttribute="trailing" secondItem="nv6-cP-QLt" secondAttribute="trailingMargin" id="my9-aP-YYI"/>
+                            <constraint firstItem="NaV-Pl-XTb" firstAttribute="centerY" secondItem="nv6-cP-QLt" secondAttribute="centerY" id="rti-J2-07M"/>
+                            <constraint firstItem="6zs-6D-suy" firstAttribute="top" secondItem="Zhe-Yl-1dl" secondAttribute="bottom" constant="101" id="spN-kp-oNz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="headerLabel" destination="ZOb-6n-NVC" id="VI6-Nx-cPZ"/>
-                        <outlet property="pauseButton" destination="UNQ-PK-ORk" id="If9-qm-Q5J"/>
-                        <outlet property="startButton" destination="TX7-u8-e8h" id="9r3-BP-y1P"/>
-                        <outlet property="timePicker" destination="KVD-e8-LTk" id="d3j-Xk-HNj"/>
-                        <outlet property="timerLabel" destination="1sn-ce-TdO" id="IAi-m1-8fT"/>
+                        <outlet property="cancelButton" destination="UNQ-PK-ORk" id="y0t-9v-JXJ"/>
+                        <outlet property="startButton" destination="TX7-u8-e8h" id="cqb-6q-uVW"/>
+                        <outlet property="textBox" destination="6zs-6D-suy" id="UYh-Af-l0n"/>
+                        <outlet property="timerLabel" destination="NaV-Pl-XTb" id="7wu-Sy-kqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBG-I3-Ier" userLabel="First Responder" sceneMemberID="firstResponder"/>
