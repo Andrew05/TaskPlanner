@@ -1,103 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Alp-ER-t6u">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="1i7-2N-hJV">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StudyPlanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leb-2Z-ZrZ">
-                                <rect key="frame" x="164" y="308" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="3gC-Bo-GJ0" kind="show" id="FWS-gh-KNb"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-585" y="64"/>
-        </scene>
-        <!--Timer View Controller-->
-        <scene sceneID="x5A-gc-b2j">
-            <objects>
-                <viewController id="3gC-Bo-GJ0" customClass="TimerViewController" customModule="StudyPlanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zhe-Yl-1dl"/>
-                        <viewControllerLayoutGuide type="bottom" id="VDG-kX-76j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nv6-cP-QLt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-u8-e8h">
-                                <rect key="frame" x="266" y="575" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="startButtonPressed:" destination="3gC-Bo-GJ0" eventType="touchUpInside" id="PH2-DD-0rb"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaV-Pl-XTb">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNQ-PK-ORk">
-                                <rect key="frame" x="57" y="575" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="cancelButtonPressed:" destination="3gC-Bo-GJ0" eventType="touchUpInside" id="tY3-cp-Jfd"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zs-6D-suy">
-                                <rect key="frame" x="16" y="121" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6zs-6D-suy" firstAttribute="leading" secondItem="nv6-cP-QLt" secondAttribute="leadingMargin" id="G5o-cV-njh"/>
-                            <constraint firstItem="NaV-Pl-XTb" firstAttribute="centerX" secondItem="nv6-cP-QLt" secondAttribute="centerX" id="SKH-3x-daG"/>
-                            <constraint firstItem="6zs-6D-suy" firstAttribute="trailing" secondItem="nv6-cP-QLt" secondAttribute="trailingMargin" id="my9-aP-YYI"/>
-                            <constraint firstItem="NaV-Pl-XTb" firstAttribute="centerY" secondItem="nv6-cP-QLt" secondAttribute="centerY" id="rti-J2-07M"/>
-                            <constraint firstItem="6zs-6D-suy" firstAttribute="top" secondItem="Zhe-Yl-1dl" secondAttribute="bottom" constant="101" id="spN-kp-oNz"/>
-                        </constraints>
-                    </view>
+                <navigationController id="Alp-ER-t6u" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WU0-92-MYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
                     <connections>
-                        <outlet property="cancelButton" destination="UNQ-PK-ORk" id="y0t-9v-JXJ"/>
-                        <outlet property="startButton" destination="TX7-u8-e8h" id="cqb-6q-uVW"/>
-                        <outlet property="textBox" destination="6zs-6D-suy" id="UYh-Af-l0n"/>
-                        <outlet property="timerLabel" destination="NaV-Pl-XTb" id="7wu-Sy-kqy"/>
+                        <segue destination="0rL-Tz-M7P" kind="relationship" relationship="rootViewController" id="AXg-WD-gGw"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pBG-I3-Ier" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTe-JW-s3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.80000000000001" y="60.719640179910051"/>
+            <point key="canvasLocation" x="-2326" y="732"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HZs-3g-Z5j">
+            <objects>
+                <tabBarController id="0rL-Tz-M7P" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ryC-r3-nA8"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2VJ-F2-eug">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ryA-E2-N6v" kind="relationship" relationship="viewControllers" id="oKw-TB-FFe"/>
+                        <segue destination="YQJ-5A-tRx" kind="relationship" relationship="viewControllers" id="Kz1-PE-74F"/>
+                        <segue destination="H1M-zD-Ryq" kind="relationship" relationship="viewControllers" id="CtV-PB-Zzb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fc-Bi-PTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1250" y="732"/>
+        </scene>
+        <!--Tasks-->
+        <scene sceneID="Zxd-Nz-AIX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" id="ryA-E2-N6v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eUE-wx-ddT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zt-Gg-MDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="560"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="gXv-uL-WkP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Timer" id="YQJ-5A-tRx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YHv-Jj-vm6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pF-fi-wvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="731"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="jdY-7T-Rrv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Calendar" id="H1M-zD-Ryq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gAE-3c-VTP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vfu-Gb-m9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="936"/>
         </scene>
     </scenes>
 </document>

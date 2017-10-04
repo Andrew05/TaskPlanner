@@ -55,7 +55,7 @@ class TimerViewController: UIViewController {
     }
     
     func updateTimer() {
-        var seconds = (Int(timePicker.countDownDuration))
+//        var seconds = (Int(timePicker.countDownDuration))
 //                timerLabel.text = timeString(time: TimeInterval(seconds))
         seconds -= 1
         let hours = seconds / 3600
