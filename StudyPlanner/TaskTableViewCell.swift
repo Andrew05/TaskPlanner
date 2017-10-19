@@ -16,7 +16,8 @@ class TaskTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        dateLabel.textColor = UIColor(red: 14/256, green: 122/256, blue: 254/256, alpha: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

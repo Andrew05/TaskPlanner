@@ -14,11 +14,13 @@
 		4972F6B11F4FB4980082F413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4972F6AF1F4FB4980082F413 /* LaunchScreen.storyboard */; };
 		4972F6B91F4FB5770082F413 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972F6B81F4FB5760082F413 /* CalendarViewController.swift */; };
 		4972F6BB1F4FBFC50082F413 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972F6BA1F4FBFC50082F413 /* CustomCell.swift */; };
+		498A201B1F981EA2006C00E9 /* TimerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A201A1F981EA2006C00E9 /* TimerSetupViewController.swift */; };
 		49B120401F8568A3000F1677 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1203F1F8568A3000F1677 /* TaskTableViewCell.swift */; };
 		49B120421F856D4C000F1677 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B120411F856D4C000F1677 /* TasksTableViewController.swift */; };
 		49B120471F85A62D000F1677 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B120461F85A62D000F1677 /* Tasks.storyboard */; };
 		49B120491F85A6D3000F1677 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B120481F85A6D3000F1677 /* Timer.storyboard */; };
 		49B1204B1F85A6E7000F1677 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B1204A1F85A6E7000F1677 /* Calendar.storyboard */; };
+		49B1204D1F87F3D8000F1677 /* AddTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1204C1F87F3D8000F1677 /* AddTasksViewController.swift */; };
 		49BF532F1F560F750065E72E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF532E1F560F750065E72E /* TimerViewController.swift */; };
 		E7A68792CD9763FFCA101DC6 /* Pods_StudyPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF7BD2E77175180462E2766 /* Pods_StudyPlanner.framework */; };
 /* End PBXBuildFile section */
@@ -34,11 +36,13 @@
 		4972F6B21F4FB4980082F413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4972F6B81F4FB5760082F413 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4972F6BA1F4FBFC50082F413 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		498A201A1F981EA2006C00E9 /* TimerSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSetupViewController.swift; sourceTree = "<group>"; };
 		49B1203F1F8568A3000F1677 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		49B120411F856D4C000F1677 /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		49B120461F85A62D000F1677 /* Tasks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
 		49B120481F85A6D3000F1677 /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		49B1204A1F85A6E7000F1677 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		49B1204C1F87F3D8000F1677 /* AddTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTasksViewController.swift; sourceTree = "<group>"; };
 		49BF532E1F560F750065E72E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		4BF7BD2E77175180462E2766 /* Pods_StudyPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D476A2899B1CB3B85E9D5623 /* Pods-StudyPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPlanner/Pods-StudyPlanner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				49B120461F85A62D000F1677 /* Tasks.storyboard */,
 				49B1203F1F8568A3000F1677 /* TaskTableViewCell.swift */,
 				49B120411F856D4C000F1677 /* TasksTableViewController.swift */,
+				49B1204C1F87F3D8000F1677 /* AddTasksViewController.swift */,
 			);
 			name = Tasks;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				49B120481F85A6D3000F1677 /* Timer.storyboard */,
+				498A201A1F981EA2006C00E9 /* TimerSetupViewController.swift */,
 				49BF532E1F560F750065E72E /* TimerViewController.swift */,
 			);
 			name = Timer;
@@ -264,9 +270,11 @@
 			files = (
 				49BF532F1F560F750065E72E /* TimerViewController.swift in Sources */,
 				4972F6B91F4FB5770082F413 /* CalendarViewController.swift in Sources */,
+				498A201B1F981EA2006C00E9 /* TimerSetupViewController.swift in Sources */,
 				49B120401F8568A3000F1677 /* TaskTableViewCell.swift in Sources */,
 				4972F6A91F4FB4980082F413 /* ViewController.swift in Sources */,
 				4972F6BB1F4FBFC50082F413 /* CustomCell.swift in Sources */,
+				49B1204D1F87F3D8000F1677 /* AddTasksViewController.swift in Sources */,
 				49B120421F856D4C000F1677 /* TasksTableViewController.swift in Sources */,
 				4972F6A71F4FB4980082F413 /* AppDelegate.swift in Sources */,
 			);

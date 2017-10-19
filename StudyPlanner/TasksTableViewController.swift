@@ -13,8 +13,10 @@ class TasksTableViewController: UITableViewController {
     var toDoTasks: [String] = ["task1", "task2"]
     var completedTasks: [String] = ["completed1", "completed2"]
     
-   
-    
+    @IBAction func addButton(_ sender: Any) {
+        performSegue(withIdentifier: "taskCreate", sender: sender)
+
+    }
 //    required init?(coder aDecoder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
 //    }
@@ -22,6 +24,9 @@ class TasksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        
+            
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,13 +48,14 @@ class TasksTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 2
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
         
+        cell.taskLabel.text = toDoTasks[indexPath.row]
         
          
         return cell
@@ -58,16 +64,11 @@ class TasksTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func addTapped() {
         
-//        if indexPath.row < 4
-//        {
-////            let item = toDoTasks[indexPath.row]
-////            item.done = !item.done
-//            
-//            tableView.reloadRows(at: [indexPath], with: .automatic)
-//        }
-        }
- 
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -113,5 +114,6 @@ class TasksTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
