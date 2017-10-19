@@ -32,10 +32,10 @@ class TimerViewController: UIViewController {
 ////        timerLabel.text = timeString(time: TimeInterval(seconds))
 //    }
     @IBAction func startButtonPressed(_ sender: Any) {
-        runTimer()
+//        runTimer()
     }
     
-    var seconds: Int
+    var seconds: Int?
     var timer = Timer()
     var isTimerRunning = false
   
@@ -46,8 +46,14 @@ class TimerViewController: UIViewController {
        
 //        headerLabel.text = "Time Left:";
 //        timerLabel.text = "00:00";
-        cancelButton.titleLabel?.text = "Pause"
-        startButton.titleLabel?.text = "Start"
+//        cancelButton.titleLabel?.text = "Pause"
+//        startButton.titleLabel?.text = "Start"
+        
+        print(seconds)
+        print(seconds)
+        print(seconds)
+        print(seconds)
+        print(seconds)
         
     }
     
@@ -59,28 +65,28 @@ class TimerViewController: UIViewController {
     }
     
     
-
-    func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateTimer)), userInfo: nil, repeats: true)
-    }
+//
+//    func runTimer() {
+//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateTimer)), userInfo: nil, repeats: true)
+//    }
     
-    func updateTimer() {
-//        var seconds = (Int(timePicker.countDownDuration))
-//                timerLabel.text = timeString(time: TimeInterval(seconds))
-        seconds -= 1
-        let hours = seconds / 3600
-        let minutes = seconds / 60 % 60
-        
-        timerLabel.text = String(format: "%02i:%02i:%02i",hours,minutes,seconds)
-    }
-    
-    func timeString(time:Int) -> String {
-        let hours = (Int(time) / 3600)
-        let minutes = (Int(time) / 60 % 60)
-        let seconds = (Int(time) % 60)
-        
-        return String(format: "%02i:%02i:%02i")
-    }
+//    func updateTimer() {
+////        var seconds = (Int(timePicker.countDownDuration))
+////                timerLabel.text = timeString(time: TimeInterval(seconds))
+//        seconds -= 1
+//        let hours = seconds / 3600
+//        let minutes = seconds / 60 % 60
+//        
+//        timerLabel.text = String(format: "%02i:%02i:%02i",hours,minutes,seconds)
+//    }
+//    
+//    func timeString(time:Int) -> String {
+//        let hours = (Int(time) / 3600)
+//        let minutes = (Int(time) / 60 % 60)
+//        let seconds = (Int(time) % 60)
+//        
+//        return String(format: "%02i:%02i:%02i")
+//    }
     
     /*
     // MARK: - Navigation

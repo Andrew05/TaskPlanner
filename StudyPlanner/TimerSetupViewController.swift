@@ -55,6 +55,7 @@ class TimerSetupViewController: UIViewController {
     
         BreakIntervalTextBar.text = breakMinutes + "Minutes"
         
+    
 
     }
     
@@ -62,6 +63,14 @@ class TimerSetupViewController: UIViewController {
         
         view.endEditing(true)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "timerViewSegue" {
+            if let timerValue = segue.destination as? TimerViewController {
+                timerValue.seconds = Int(self.timePicker.countDownDuration)
+            }
+        }
     }
 
     /*

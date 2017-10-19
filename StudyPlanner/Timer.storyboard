@@ -112,7 +112,7 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startButton:" destination="qrB-pN-luF" eventType="touchUpInside" id="td1-dL-Kli"/>
-                                    <segue destination="yhn-81-JKM" kind="show" id="dOe-qp-ATl"/>
+                                    <segue destination="yhn-81-JKM" kind="show" identifier="timerViewSegue" id="dOe-qp-ATl"/>
                                 </connections>
                             </button>
                         </subviews>
