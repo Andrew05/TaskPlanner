@@ -12,14 +12,24 @@ class TimerSetupViewController: UIViewController {
 
     @IBOutlet weak var timerIntervalTextBar: UITextField!
     
+    @IBOutlet weak var BreakIntervalTextBar: UITextField!
     var timePicker = UIDatePicker()
+    
+    @IBAction func startButton(_ sender: Any) {
+        
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        timePicker.datePickerMode = UIDatePickerMode.countDownTimer
         timerIntervalTextBar.inputView = timePicker
-        timerIntervalTextBar.addTarget(self, action: Selector(("timePickerChanged")), for: UIControlEvents.valueChanged)
+        let toolBar = UIToolbar().ToolbarPicker(mySelect: #selector(self.dismissPicker))
+
+        timerIntervalTextBar.inputAccessoryView = toolBar
+        
+        timePicker.addTarget(self, action: #selector(timePickerChanged(sender:)), for: UIControlEvents.valueChanged)
         
     }
 
@@ -30,8 +40,28 @@ class TimerSetupViewController: UIViewController {
     
     func timePickerChanged(sender: UIDatePicker) {
         
-        print(timePicker.date)
-//        timerIntervalTextBar.text = timePicker.date
+        
+        let date = timePicker.date
+        let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+        let hours = components.hour!
+        let minutesLeft = components.minute!
+        let hourString = String(hours)
+        let minutesString = String(minutesLeft)
+        
+        timerIntervalTextBar.text = hourString + " Hours & " + minutesString + " Minutes"
+        
+       let breakTime = (timePicker.countDownDuration) / 5
+       let breakMinutes = String(breakTime/60)
+    
+        BreakIntervalTextBar.text = breakMinutes + "Minutes"
+        
+
+    }
+    
+    func dismissPicker() {
+        
+        view.endEditing(true)
+        
     }
 
     /*

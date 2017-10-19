@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="49N-oG-oj5">
             <objects>
-                <viewController id="yhn-81-JKM" sceneMemberID="viewController">
+                <viewController id="yhn-81-JKM" customClass="TimerViewController" customModule="StudyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yao-6R-1W5"/>
                         <viewControllerLayoutGuide type="bottom" id="3Vm-6c-Kf7"/>
@@ -31,23 +31,41 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vx-hI-oIF">
                                 <rect key="frame" x="136.5" y="482" width="102" height="30"/>
                                 <state key="normal" title="Pause/Resume"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="yhn-81-JKM" eventType="touchUpInside" id="40w-j6-Htk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaI-fx-idS">
-                                <rect key="frame" x="164" y="558" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="163" y="558" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="yhn-81-JKM" eventType="touchUpInside" id="WBU-hy-UfK"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNn-tX-c84">
+                                <rect key="frame" x="164.5" y="252" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8vx-hI-oIF" firstAttribute="centerX" secondItem="0VA-to-X8N" secondAttribute="centerX" id="09q-bw-HYZ"/>
                             <constraint firstItem="CaI-fx-idS" firstAttribute="top" secondItem="8vx-hI-oIF" secondAttribute="bottom" constant="46" id="0NL-TP-Kpt"/>
+                            <constraint firstItem="sNn-tX-c84" firstAttribute="centerX" secondItem="0VA-to-X8N" secondAttribute="centerX" id="7gl-yV-fAt"/>
                             <constraint firstItem="lNt-1X-uWS" firstAttribute="centerX" secondItem="0VA-to-X8N" secondAttribute="centerX" id="JEY-6f-pUt"/>
                             <constraint firstItem="lNt-1X-uWS" firstAttribute="top" secondItem="yao-6R-1W5" secondAttribute="bottom" constant="106" id="R7Q-eX-UPG"/>
+                            <constraint firstItem="sNn-tX-c84" firstAttribute="top" secondItem="lNt-1X-uWS" secondAttribute="bottom" constant="39" id="p1q-X2-ZlV"/>
                             <constraint firstItem="CaI-fx-idS" firstAttribute="centerX" secondItem="0VA-to-X8N" secondAttribute="centerX" id="t3K-Ps-mkp"/>
                             <constraint firstItem="3Vm-6c-Kf7" firstAttribute="top" secondItem="8vx-hI-oIF" secondAttribute="bottom" constant="155" id="zLN-HL-5BR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DjO-ld-fT7"/>
+                    <connections>
+                        <outlet property="nextSessionLabel" destination="sNn-tX-c84" id="zZX-1k-YwE"/>
+                        <outlet property="timeLeftLabel" destination="lNt-1X-uWS" id="4B3-IA-xTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtY-kv-dgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,9 +108,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jws-f9-ZSV">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="170" y="318" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
+                                    <action selector="startButton:" destination="qrB-pN-luF" eventType="touchUpInside" id="td1-dL-Kli"/>
                                     <segue destination="yhn-81-JKM" kind="show" id="dOe-qp-ATl"/>
                                 </connections>
                             </button>
@@ -115,6 +134,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xia-cS-htc"/>
                     <connections>
+                        <outlet property="BreakIntervalTextBar" destination="8EY-1g-gse" id="YAs-oA-Gfp"/>
                         <outlet property="timerIntervalTextBar" destination="yjB-wy-Doa" id="Waj-ZW-FRE"/>
                     </connections>
                 </viewController>

@@ -16,17 +16,26 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    @IBOutlet weak var timeLeftLabel: UILabel!
+    @IBOutlet weak var nextSessionLabel: UILabel!
+   
+    @IBAction func pauseButtonPressed(_ sender: Any) {
+    }
    
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        timer.invalidate()
-        seconds = 60
-//        timerLabel.text = timeString(time: TimeInterval(seconds))
     }
+   
+    
+//    @IBAction func cancelButtonPressed2(_ sender: Any) {
+//        timer.invalidate()
+//        seconds = 60
+////        timerLabel.text = timeString(time: TimeInterval(seconds))
+//    }
     @IBAction func startButtonPressed(_ sender: Any) {
         runTimer()
     }
     
-    var seconds: Int = 60
+    var seconds: Int
     var timer = Timer()
     var isTimerRunning = false
   
@@ -48,6 +57,7 @@ class TimerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     func runTimer() {
